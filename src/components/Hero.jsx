@@ -6,7 +6,7 @@ const Hero = () => {
         <section id="about" className="hero">
             <div className="container hero__container">
                 <h1 className="hero__title">
-                    Haerin <span className="highlight-pill">Portfolio</span>
+                    Visual Experience Design: <span className="highlight-pill">YuHaerin</span>
                 </h1>
                 <p className="hero__subtitle">
                     Creating immersive digital experiences. Check out my works below.
