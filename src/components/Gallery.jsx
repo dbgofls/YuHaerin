@@ -12,6 +12,15 @@ const images = [
     { id: 8, src: '/myworks/Game Controller 모델링.png', title: 'Game Controller Modeling', lessons: 'New Project' },
     { id: 9, src: '/myworks/수박 인포그래픽.png', title: 'Watermelon Infographic', lessons: 'New Project' },
     { id: 10, src: '/myworks/에어프라이기 판넬.jpg', title: 'Air Fryer Panel', lessons: 'New Project' },
+    { id: 11, src: '/myworks/design_work_02.jpg', title: 'Design Work 2', lessons: 'Inspiration' },
+    { id: 12, src: '/myworks/design_work_03.jpg', title: 'Design Work 3', lessons: 'Inspiration' },
+    { id: 13, src: '/myworks/design_work_04.jpg', title: 'Design Work 4', lessons: 'Inspiration' },
+    { id: 14, src: '/myworks/design_work_05.jpg', title: 'Design Work 5', lessons: 'Inspiration' },
+    { id: 15, src: '/myworks/design_work_06.jpg', title: 'Design Work 6', lessons: 'Inspiration' },
+    { id: 16, src: '/myworks/design_work_07.jpg', title: 'Design Work 7', lessons: 'Inspiration' },
+    { id: 17, src: '/myworks/design_work_08.jpg', title: 'Design Work 8', lessons: 'Inspiration' },
+    { id: 18, src: '/myworks/design_work_09.jpg', title: 'Design Work 9', lessons: 'Inspiration' },
+    { id: 19, src: '/myworks/design_work_10.jpg', title: 'Design Work 10', lessons: 'Inspiration' },
 ];
 
 const Gallery = () => {
