@@ -97,8 +97,9 @@
 }
 
 .profile-avatar {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    /* Smaller size */
+    height: 100px;
     background-color: #ddd;
     border: 4px solid black;
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
