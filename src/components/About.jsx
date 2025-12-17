@@ -4,6 +4,11 @@ import './About.css';
 const About = () => {
     return (
         <section id="about" className="about">
+            {/* Background Clouds */}
+            <div className="cloud c1"></div>
+            <div className="cloud c2"></div>
+            <div className="cloud c3"></div>
+
             <div className="window-frame">
                 <div className="window-header">
                     <div className="win-btn">_</div>

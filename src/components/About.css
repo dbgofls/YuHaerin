@@ -1,11 +1,74 @@
-/* About.css - Resume Style (Text Heavy) */
+/* About.css - Resume Style with Clouds */
 .about {
     padding: 4rem 0;
     display: flex;
     justify-content: center;
-    background-color: var(--bg-sky);
+    background-color: #4FC3F7;
+    /* Mario Sky Blue */
     position: relative;
     font-family: var(--font-pixel);
+    overflow: hidden;
+    /* Keep clouds inside */
+}
+
+/* Pixel Clouds */
+.cloud {
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    z-index: 1;
+    /* Behind window (z-index 10) */
+}
+
+/* Pixel Art Shape using Box Shadow */
+.cloud::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 60px;
+    height: 20px;
+    background-color: white;
+    box-shadow:
+        -20px 20px 0 0 white,
+        20px 20px 0 0 white,
+        0 -20px 0 0 white;
+}
+
+.c1 {
+    top: 50px;
+    left: 10%;
+    transform: scale(1.5);
+    animation: floatCloud 20s infinite linear;
+}
+
+.c2 {
+    top: 150px;
+    right: 5%;
+    transform: scale(2);
+    animation: floatCloud 25s infinite linear reverse;
+}
+
+.c3 {
+    bottom: 50px;
+    left: 20%;
+    transform: scale(1.2);
+    animation: floatCloud 30s infinite linear;
+}
+
+@keyframes floatCloud {
+    0% {
+        transform: translateX(0) scale(var(--scale, 1));
+    }
+
+    50% {
+        transform: translateX(20px) scale(var(--scale, 1));
+    }
+
+    100% {
+        transform: translateX(0) scale(var(--scale, 1));
+    }
 }
 
 .window-frame {
@@ -17,6 +80,9 @@
     width: 90%;
     max-width: 1000px;
     box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    /* Above clouds */
 }
 
 .window-header {
