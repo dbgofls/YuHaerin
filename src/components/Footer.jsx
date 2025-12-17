@@ -23,7 +23,7 @@ const Footer = () => {
                         <h3>CONNECT</h3>
                         <ul className="footer__links">
                             <li><a href="https://www.youtube.com/@%EC%A7%91%EC%88%9C%EC%9D%B4%EA%B3%B5%EC%A3%BC" target="_blank" rel="noopener noreferrer">YOUTUBE</a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></li>
+                            <li><a href="https://www.instagram.com/licid._.0816/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></li>
                             <li><a href="#">GITHUB</a></li>
                         </ul>
                     </div>
