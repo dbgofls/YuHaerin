@@ -1,5 +1,4 @@
-import React from 'react';
-import './About.css';
+import profileImg from '../assets/profile.jpg';
 
 const About = () => {
     return (
@@ -16,8 +15,8 @@ const About = () => {
                         {/* Left Column: Avatar & Character */}
                         <div className="about__profile">
                             <div className="profile-avatar">
-                                {/* Placeholder for pixel avatar */}
-                                <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=PLAYER" alt="Avatar" />
+                                {/* Use imported profile image */}
+                                <img src={profileImg} alt="Avatar" />
                             </div>
                             <h3>LVL 26</h3>
                             <button>STATUS</button>
