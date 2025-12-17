@@ -22,7 +22,7 @@ const Footer = () => {
                     <div className="footer__section">
                         <h3>CONNECT</h3>
                         <ul className="footer__links">
-                            <li><a href="#">YOUTUBE</a></li>
+                            <li><a href="https://www.youtube.com/@%EC%A7%91%EC%88%9C%EC%9D%B4%EA%B3%B5%EC%A3%BC" target="_blank" rel="noopener noreferrer">YOUTUBE</a></li>
                             <li><a href="#">INSTAGRAM</a></li>
                             <li><a href="#">GITHUB</a></li>
                         </ul>
