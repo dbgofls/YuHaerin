@@ -1,0 +1,162 @@
+/* About.css - Pixel Game Window */
+.about {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-sky);
+    /* Mario Sky Blue */
+    position: relative;
+}
+
+/* Clouds Decoration (Pseudo-elements) */
+.about::before,
+.about::after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.about::before {
+    top: 10%;
+    left: 5%;
+    box-shadow: 40px -10px 0 10px white, 90px 5px 0 5px white;
+}
+
+.about::after {
+    top: 20%;
+    right: 10%;
+    box-shadow: 40px -10px 0 10px white, 90px 5px 0 5px white;
+}
+
+
+.window-frame {
+    background-color: var(--bg-window);
+    /* Yellow */
+    border: 4px solid black;
+    border-radius: 8px;
+    /* Slight round for CRT feel, or 0 for pure pixel */
+    padding: 4px;
+    /* Border gap */
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.window-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+}
+
+.win-btn {
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    background: black;
+    color: white;
+    /* Icons inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.window-content {
+    background-color: white;
+    border: 4px solid black;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: black;
+    font-family: var(--font-pixel);
+    font-size: 0.8rem;
+    /* Press Start 2P is large */
+}
+
+/* 2-Column Layout */
+.about__grid {
+    display: flex;
+    gap: 2rem;
+}
+
+.about__profile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border: 4px solid black;
+    image-rendering: pixelated;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about__info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h2.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border-bottom: 4px solid black;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.info-group h3 {
+    margin-bottom: 0.5rem;
+    color: var(--bg-night);
+}
+
+.info-list {
+    list-style: square inside;
+    line-height: 1.8;
+}
+
+.skill-bar {
+    margin-bottom: 0.5rem;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 16px;
+    border: 2px solid black;
+    background: #eee;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent-green);
+}
+
+@media (max-width: 768px) {
+    .about__grid {
+        flex-direction: column;
+    }
+}

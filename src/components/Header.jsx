@@ -4,14 +4,25 @@ import './Header.css';
 const Header = () => {
     return (
         <header className="header">
-            <div className="container header__container">
-                <div className="header__logo">Akademia</div>
+            <div className="header__container">
+                {/* Lives / Health Bar */}
+                <div className="header__lives">
+                    <span className="heart-icon">♥</span>
+                    <span className="heart-icon">♥</span>
+                    <span className="heart-icon">♥</span>
+                </div>
+
                 <nav className="header__nav">
-                    <a href="#about" className="header__link">About</a>
-                    <a href="#myworks" className="header__link">My Works</a>
-                    <a href="#resources" className="header__link">Resources</a>
+                    <a href="#about" className="header__link">PLAYER</a>
+                    <a href="#myworks" className="header__link">LEVELS</a>
+                    <a href="#resources" className="header__link">ITEMS</a>
                 </nav>
-                <a href="#contact" className="header__cta">Contact</a>
+
+                {/* Coins / Score */}
+                <div className="header__score">
+                    <span className="coin-icon"></span>
+                    <span>x 99</span>
+                </div>
             </div>
         </header>
     );

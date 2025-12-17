@@ -4,37 +4,35 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer id="contact" className="footer">
-            <div className="container">
-                <div className="footer__card">
-                    <div className="footer__left">
-                        <div className="subscribe-badge">Contact</div>
-                        <h2 className="footer__title">Contact</h2>
+            <div className="footer__container">
+                <h2 className="footer__title">GAME OVER</h2>
+                <span className="coin-insert">INSERT COIN TO CONTINUE</span>
 
-                        <div className="footer__contact-info">
-                            <p>Feel free to reach out for collaborations.</p>
-                            <a href="mailto:yhr060816@naver.com" className="footer__email-link">
-                                yhr060816@naver.com
-                            </a>
-                        </div>
+                <div className="footer__grid">
+                    {/* Column 1 */}
+                    <div className="footer__section">
+                        <h3>CREDITS</h3>
+                        <ul className="footer__links">
+                            <li><a href="#">DESIGN BY HAERIN</a></li>
+                            <li><a href="#">CODE BY AI</a></li>
+                        </ul>
                     </div>
 
-                    <div className="footer__right">
-                        <nav className="footer__nav">
-                            <a href="#about">About</a>
-                            <a href="#myworks">My Works</a>
-                            <a href="#resources">Resources</a>
-                            <a href="#academy">Academy</a>
-                            <a href="#contact">Contact</a>
-                        </nav>
-
-                        <div className="footer__socials">
-                            {/* Social icons placeholders */}
-                            <div className="social-icon">f</div>
-                            <div className="social-icon">t</div>
-                        </div>
+                    {/* Column 2 */}
+                    <div className="footer__section">
+                        <h3>CONNECT</h3>
+                        <ul className="footer__links">
+                            <li><a href="mailto:example@email.com">EMAIL</a></li>
+                            <li><a href="#">INSTAGRAM</a></li>
+                            <li><a href="#">GITHUB</a></li>
+                        </ul>
                     </div>
                 </div>
-                <p className="copyright">&copy; {new Date().getFullYear()} My Portfolio. Privacy policy</p>
+
+                <div className="footer__bottom">
+                    <p>All rights reserved Rayo© 2025</p>
+                    <p>Privacy Policy</p>
+                </div>
             </div>
         </footer>
     );

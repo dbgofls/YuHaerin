@@ -1,56 +1,93 @@
+/* Header.css - Pixel HUD Style */
 .header {
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    position: sticky;
+    width: 100%;
+    height: 60px;
+    background-color: var(--bg-night);
+    padding: 0 1rem;
+    position: fixed;
     top: 0;
-    background-color: rgba(244, 244, 240, 0.9);
-    /* Match bg-primary with opacity */
-    backdrop-filter: blur(10px);
-    z-index: 100;
+    left: 0;
+    z-index: 999;
+    border-bottom: 4px solid black;
+    display: flex;
+    justify-content: center;
 }
 
 .header__container {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
 }
 
-.header__logo {
-    font-family: var(--font-heading);
-    font-weight: 800;
+/* Life Hearts */
+.header__lives {
+    display: flex;
+    gap: 8px;
+}
+
+.heart-icon {
+    color: var(--accent-red);
     font-size: 1.5rem;
-    letter-spacing: -0.02em;
+    text-shadow: 2px 2px 0px black;
 }
 
 .header__nav {
     display: flex;
-    gap: var(--spacing-md);
+    gap: 2rem;
 }
 
 .header__link {
-    font-weight: 500;
+    color: white;
     font-size: 1rem;
-    color: var(--text-primary);
+    text-transform: uppercase;
+    padding: 0.5rem;
+    transition: color 0.2s;
 }
 
 .header__link:hover {
-    color: var(--text-secondary);
+    color: var(--accent-yellow);
+    /* Highlight color */
+    background: none;
+    /* Remove previous BG */
+    text-decoration: underline;
 }
 
-.header__cta {
-    padding: 0.8rem 1.5rem;
-    border: 1px solid var(--text-primary);
-    border-radius: var(--border-radius-btn);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
+/* Coin / Score Area */
+.header__score {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--bg-window);
+    /* Gold */
+    font-size: 1.2rem;
 }
 
-.header__cta:hover {
-    background-color: var(--text-primary);
-    color: var(--bg-secondary);
+.coin-icon {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-window);
+    border-radius: 50%;
+    border: 2px solid black;
+    display: inline-block;
+    position: relative;
+}
+
+.coin-icon::after {
+    content: '$';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

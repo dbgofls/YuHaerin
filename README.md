@@ -1,16 +1,23 @@
-# React + Vite
+# YuHaerin Portfolio (Retro Version)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the Retro Pixel Game version of the portfolio.
 
-Currently, two official plugins are available:
+## 🚀 How to View the Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live URL:** [https://dbgofls.github.io/YuHaerin/](https://dbgofls.github.io/YuHaerin/)
 
-## React Compiler
+## ⚠️ Important: If the design hasn't changed?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+If you see the old blue/white site instead of the "Game Title Screen":
 
-## Expanding the ESLint configuration
+1. Go to this repository's **Settings**.
+2. Click **Pages** on the left sidebar.
+3. Under **Build and deployment** > **Branch**:
+   - Change `main` to **`gh-pages`**.
+   - Click **Save**.
+4. Wait 1-2 minutes and refresh the site.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🕹️ Project Setup
+
+- **Build**: `npm run build`
+- **Deploy**: `npm run deploy`

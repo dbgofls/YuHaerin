@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Gallery.css';
 
 const images = [
@@ -17,22 +17,30 @@ const images = [
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
 
+    useEffect(() => {
+        if (selectedImage) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [selectedImage]);
+
     const openModal = (image) => {
         setSelectedImage(image);
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
     };
 
     const closeModal = () => {
         setSelectedImage(null);
-        document.body.style.overflow = 'auto';
     };
 
     return (
         <section id="myworks" className="gallery">
             <div className="container">
                 <div className="gallery__header">
-                    <h2 className="section-title">MY WORKS</h2>
-                    <div className="deco-lines"></div>
+                    <h2 className="section-title">SELECT LEVEL</h2>
                 </div>
 
                 <div className="gallery__grid">
@@ -42,14 +50,14 @@ const Gallery = () => {
                                 <img src={image.src} alt={image.title} loading="lazy" />
                             </div>
                             <div className="card__content">
-                                <span className="card__meta">{image.lessons}</span>
+                                <span className="card__meta">WORLD 1-{image.id}</span>
                                 <h3 className="card__title">{image.title}</h3>
                                 <button
                                     className="card__btn"
                                     aria-label="View details"
                                     onClick={() => openModal(image)}
                                 >
-                                    <span className="card__btn-icon">👀</span>
+                                    PLAY ►
                                 </button>
                             </div>
                         </div>
@@ -57,7 +65,7 @@ const Gallery = () => {
                 </div>
 
                 <div className="gallery__footer">
-                    <button className="btn-black">More topics</button>
+                    <button className="btn-black">LOAD MORE LEVELS ...</button>
                 </div>
             </div>
 

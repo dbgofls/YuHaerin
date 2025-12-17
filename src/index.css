@@ -1,35 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-  /* Colors */
-  --bg-primary: #e0f2fe;
-  /* Sky blue */
-  --bg-secondary: #ffffff;
-  --text-primary: #1a1a1a;
-  --text-secondary: #555555;
+  /* Retro Game Palette */
+  --bg-sky: #5C94FC;
+  /* Mario Sky Blue */
+  --bg-night: #1A1C2C;
+  /* Deep Night Blue */
+  --bg-window: #FFD700;
+  /* UI Window Yellow */
+  --bg-content: #FFFFFF;
+  /* White content bg */
 
-  /* Accents */
-  --accent-yellow: #fff59d;
-  --accent-blue: #2979ff;
-  --accent-green: #4caf50;
-  --accent-black: #000000;
+  --text-main: #212121;
+  /* Black/Dark Grey */
+  --text-light: #FFFFFF;
+  /* White text */
 
-  /* Typography */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --accent-red: #FF4D4D;
+  /* Hearts / Error */
+  --accent-green: #4CAF50;
+  /* Ground / Success */
+  --accent-blue: #4FC1E9;
+  /* Water / Info */
+
+  --border-color: #000000;
+  --border-width: 4px;
+
+  /* Fonts */
+  --font-pixel: 'Press Start 2P', cursive;
+  --font-mono: 'VT323', monospace;
 
   /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 8rem;
-
-  /* Layout */
-  --container-width: 1200px;
-  --header-height: 80px;
-  --border-radius-card: 24px;
-  --border-radius-btn: 100px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
 }
 
 * {
@@ -39,46 +45,52 @@
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--bg-primary);
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-  color: var(--text-primary);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  line-height: 1.1;
-  color: var(--text-primary);
+  font-family: var(--font-pixel);
+  background-color: var(--bg-sky);
+  color: var(--text-main);
+  line-height: 1.5;
+  image-rendering: pixelated;
+  /* Essential for crisp pixel art */
 }
 
 a {
-  color: var(--text-primary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  color: inherit;
+  cursor: pointer;
 }
 
 button {
-  font-family: var(--font-body);
+  border: var(--border-width) solid var(--border-color);
+  background-color: var(--bg-content);
+  font-family: var(--font-pixel);
+  padding: 1rem;
   cursor: pointer;
-  border: none;
-  outline: none;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+  /* Hard shadow */
 }
 
-img {
-  max-width: 100%;
-  display: block;
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .container {
-  max-width: var(--container-width);
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-sm);
+  padding: 0 var(--spacing-md);
+  position: relative;
+}
+
+/* Scrollbar styling for retro feel */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-night);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-window);
+  border: 2px solid black;
 }
