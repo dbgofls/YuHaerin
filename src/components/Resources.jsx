@@ -2,10 +2,10 @@ import React from 'react';
 import './Resources.css';
 
 const items = [
-    { id: 1, name: 'RESUME.PDF', price: 'FREE', icon: '📄', description: 'Detailed stats & skills' },
-    { id: 2, name: 'PORTFOLIO.PDF', price: 'FREE', icon: '📘', description: 'Offline version' },
-    { id: 3, name: 'BUSINESS CARD', price: '50 G', icon: '💳', description: 'Contact info +1' },
-    { id: 4, name: 'DESIGN ASSETS', price: '100 G', icon: '💎', description: 'Rare PNGs' }
+    { id: 1, name: 'PHOTOSHOP', price: 'LV. 99', icon: '🎨', description: 'Image editing mastery' },
+    { id: 2, name: 'ILLUSTRATOR', price: 'LV. 90', icon: '✒️', description: 'Vector art expertise' },
+    { id: 3, name: 'FIGMA', price: 'LV. 85', icon: '🛠️', description: 'UI/UX design proficiency' },
+    { id: 4, name: 'BLENDER', price: 'LV. 70', icon: '🧊', description: '3D modeling basics' }
 ];
 
 const Resources = () => {
@@ -18,11 +18,11 @@ const Resources = () => {
                             {/* Simple CSS/Emoji Shopkeeper */}
                             <span className="keeper-sprite">🧙‍♂️</span>
                             <div className="speech-bubble">
-                                <p>WELCOME, TRAVELER!</p>
-                                <p>TAKE A LOOK AT MY WARES.</p>
+                                <p>STATUS: ONLINE</p>
+                                <p>READY TO LEVEL UP!</p>
                             </div>
                         </div>
-                        <h2 className="section-title">ITEM SHOP</h2>
+                        <h2 className="section-title">SKILLS</h2>
                     </div>
 
                     <div className="items-grid">
