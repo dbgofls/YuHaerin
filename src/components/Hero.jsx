@@ -18,11 +18,11 @@ const Hero = () => {
             <div className="hero__ui">
                 <h1 className="hero__title">
                     <span className="title-line">PORTFOLIO</span>
-                    <span className="subtitle-line">GRAPHIC DESIGNER</span>
+                    <span className="subtitle-line">WEB DESIGNER</span>
                     <span className="year-line">2025</span>
                 </h1>
 
-                <a href="#about" className="start-btn-pill">START</a>
+                <a href="#about" className="start-btn-pill">PLAY ►</a>
             </div>
 
             <div className="hero__scene">

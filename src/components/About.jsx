@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import profileImg from '../assets/profile.jpg';
 
 const About = () => {
     return (
@@ -22,11 +23,18 @@ const About = () => {
 
                         {/* Section: Profile / Intro */}
                         <div className="resume-section full-width">
-                            <h2>Yu Haerin</h2>
-                            <p className="subtitle">GRAPHIC DESIGNER & LOGO CREATOR</p>
-                            <p className="intro-text">
-                                Passionate about all things graphic design with a great sense of curiosity.
-                            </p>
+                            <div className="profile-header">
+                                <div className="profile-photo">
+                                    <img src={profileImg} alt="Yu Haerin Profile" />
+                                </div>
+                                <div className="profile-info">
+                                    <h2>Yu Haerin</h2>
+                                    <p className="subtitle">STUDENT OF INFORMATICS & PRODUCT DESIGN AT CHOSUN UNIVERSITY</p>
+                                    <p className="intro-text">
+                                        I have a great passion and curiosity for web design.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Left Column */}
@@ -34,26 +42,20 @@ const About = () => {
                             <div className="resume-group">
                                 <h3>EDUCATION</h3>
                                 <div className="resume-item">
-                                    <span className="year">2016-2017</span>
+                                    <span className="year">2025 - Present</span>
                                     <div className="details">
-                                        <strong>Bachelor of Arts (B.A)</strong>
-                                        <span>Design University</span>
+                                        <strong>Informatics & Product Design</strong>
+                                        <span>Chosun University, Korea</span>
                                     </div>
                                 </div>
-                                <div className="resume-item">
-                                    <span className="year">2019-2020</span>
-                                    <div className="details">
-                                        <strong>Master of Design (M.Des)</strong>
-                                        <span>Design University</span>
-                                    </div>
-                                </div>
+
                             </div>
 
                             <div className="resume-group">
                                 <h3>CONTACT</h3>
                                 <ul className="resume-list">
-                                    <li>Phone: 010-1234-5678</li>
-                                    <li>Email: example@email.com</li>
+                                    <li>Phone: 010-6601-8132</li>
+                                    <li>Email: yhr060816@naver.com</li>
                                 </ul>
                             </div>
                         </div>
@@ -63,12 +65,8 @@ const About = () => {
                             <div className="resume-group">
                                 <h3>EXPERIENCE</h3>
                                 <div className="resume-item">
-                                    <strong>Freelance Designer</strong>
-                                    <span>2020 - Present</span>
-                                </div>
-                                <div className="resume-item">
-                                    <strong>Graphic Designer</strong>
-                                    <span>Creative Studio</span>
+                                    <strong>Student Studying Design</strong>
+                                    <span>2025 - Present</span>
                                 </div>
                             </div>
 

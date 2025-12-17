@@ -14,7 +14,7 @@ const Header = () => {
 
                 <nav className="header__nav">
                     <a href="#about" className="header__link">PLAYER</a>
-                    <a href="#myworks" className="header__link">LEVELS</a>
+                    <a href="#myworks" className="header__link">MY WORKS</a>
                     <a href="#resources" className="header__link">ITEMS</a>
                 </nav>
 
