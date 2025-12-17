@@ -4,7 +4,7 @@ import './Resources.css';
 const items = [
     { id: 1, name: 'PHOTOSHOP', price: 'LV. 99', icon: '🎨', description: 'Image editing mastery' },
     { id: 2, name: 'ILLUSTRATOR', price: 'LV. 90', icon: '✒️', description: 'Vector art expertise' },
-    { id: 3, name: 'FIGMA', price: 'LV. 85', icon: '🛠️', description: 'UI/UX design proficiency' },
+    { id: 3, name: 'RHINO', price: 'LV. 85', icon: '📐', description: '3D modeling proficiency' },
     { id: 4, name: 'BLENDER', price: 'LV. 70', icon: '🧊', description: '3D modeling basics' }
 ];
 
