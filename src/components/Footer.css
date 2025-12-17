@@ -6,6 +6,8 @@
     font-family: var(--font-pixel);
     text-align: center;
     border-top: 4px solid var(--accent-red);
+    position: relative;
+    z-index: 50;
 }
 
 .footer__container {
@@ -58,9 +60,16 @@
     margin-bottom: 0.5rem;
 }
 
+.footer__links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
 .footer__links a:hover {
     color: var(--accent-green);
-    text-decoration: underline;
+    text-shadow: 0 0 10px var(--accent-green);
 }
 
 .footer__bottom {
