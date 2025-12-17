@@ -22,7 +22,7 @@ const Footer = () => {
                     <div className="footer__section">
                         <h3>CONNECT</h3>
                         <ul className="footer__links">
-                            <li><a href="mailto:example@email.com">EMAIL</a></li>
+                            <li><a href="#">YOUTUBE</a></li>
                             <li><a href="#">INSTAGRAM</a></li>
                             <li><a href="#">GITHUB</a></li>
                         </ul>
