@@ -13,9 +13,10 @@ const Header = () => {
                 </div>
 
                 <nav className="header__nav">
+                    <a href="#hero" className="header__link">HOME</a>
                     <a href="#about" className="header__link">PLAYER</a>
                     <a href="#myworks" className="header__link">MY WORKS</a>
-                    <a href="#resources" className="header__link">ITEMS</a>
+                    <a href="#resources" className="header__link">SKILLS</a>
                 </nav>
 
                 {/* Coins / Score */}
