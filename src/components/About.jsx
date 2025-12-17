@@ -1,4 +1,5 @@
-import profileImg from '../assets/profile.jpg';
+import React from 'react';
+import './About.css';
 
 const About = () => {
     return (
@@ -11,47 +12,80 @@ const About = () => {
                 </div>
 
                 <div className="window-content">
-                    <div className="about__grid">
-                        {/* Left Column: Avatar & Character */}
-                        <div className="about__profile">
-                            <div className="profile-avatar">
-                                {/* Use imported profile image */}
-                                <img src={profileImg} alt="Avatar" />
-                            </div>
-                            <h3>LVL 26</h3>
-                            <button>STATUS</button>
+                    {/* Resume Grid Layout */}
+                    <div className="resume-grid">
+
+                        {/* Section: Profile / Intro */}
+                        <div className="resume-section full-width">
+                            <h2>Yu Haerin</h2>
+                            <p className="subtitle">GRAPHIC DESIGNER & LOGO CREATOR</p>
+                            <p className="intro-text">
+                                Passionate about all things graphic design with a great sense of curiosity.
+                            </p>
                         </div>
 
-                        {/* Right Column: Info */}
-                        <div className="about__info">
-                            <h2 className="section-title">About Me</h2>
-                            <p>
-                                My name is Yu Haerin.
-                                I'm a Graphic Designer & Logo Creator.
-                                Passionate about all things graphic design with
-                                a great sense of curiosity.
-                            </p>
+                        {/* Left Column */}
+                        <div className="resume-col">
+                            <div className="resume-group">
+                                <h3>EDUCATION</h3>
+                                <div className="resume-item">
+                                    <span className="year">2016-2017</span>
+                                    <div className="details">
+                                        <strong>Bachelor of Arts (B.A)</strong>
+                                        <span>Design University</span>
+                                    </div>
+                                </div>
+                                <div className="resume-item">
+                                    <span className="year">2019-2020</span>
+                                    <div className="details">
+                                        <strong>Master of Design (M.Des)</strong>
+                                        <span>Design University</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <div className="info-group">
-                                <h3>Contact Me</h3>
-                                <ul className="info-list">
+                            <div className="resume-group">
+                                <h3>CONTACT</h3>
+                                <ul className="resume-list">
                                     <li>Phone: 010-1234-5678</li>
                                     <li>Email: example@email.com</li>
                                 </ul>
                             </div>
+                        </div>
 
-                            <div className="info-group">
-                                <h3>Skills</h3>
-                                <div className="skill-bar">
-                                    <span className="skill-name">Graphic Design</span>
-                                    <div className="progress-container"><div className="progress-fill" style={{ width: '90%' }}></div></div>
+                        {/* Right Column */}
+                        <div className="resume-col">
+                            <div className="resume-group">
+                                <h3>EXPERIENCE</h3>
+                                <div className="resume-item">
+                                    <strong>Freelance Designer</strong>
+                                    <span>2020 - Present</span>
                                 </div>
-                                <div className="skill-bar">
-                                    <span className="skill-name">Web Design</span>
-                                    <div className="progress-container"><div className="progress-fill" style={{ width: '75%' }}></div></div>
+                                <div className="resume-item">
+                                    <strong>Graphic Designer</strong>
+                                    <span>Creative Studio</span>
+                                </div>
+                            </div>
+
+                            <div className="resume-group">
+                                <h3>SKILLS</h3>
+                                <div className="skill-columns">
+                                    <ul className="resume-list">
+                                        <li>Branding</li>
+                                        <li>Typography</li>
+                                        <li>Color Theory</li>
+                                        <li>Logo Design</li>
+                                    </ul>
+                                    <ul className="resume-list">
+                                        <li>Photoshop</li>
+                                        <li>Illustrator</li>
+                                        <li>Figma</li>
+                                        <li>Blender</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
