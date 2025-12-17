@@ -3,18 +3,17 @@
 > eslint .
 
 
-C:\Users\LG전자\Desktop\my portfolio\src\components\Gallery.jsx
-  22:9  error  Error: This value cannot be modified
+Oops! Something went wrong! :(
 
-Modifying a variable defined outside a component or hook is not allowed. Consider using an effect.
+ESLint: 8.57.1
 
-  20 |     const openModal = (image) => {
-  21 |         setSelectedImage(image);
-> 22 |         document.body.style.overflow = 'hidden'; // Prevent background scrolling
-     |         ^^^^^^^^^^^^^^^^^^^ value cannot be modified
-  23 |     };
-  24 |
-  25 |     const closeModal = () => {  react-hooks/immutability
-
-✖ 1 problem (1 error, 0 warnings)
-
+Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: Package subpath './config' is not defined by "exports" in C:\Users\LG전자\Desktop\my portfolio\node_modules\eslint\package.json imported from C:\Users\LG전자\Desktop\my portfolio\eslint.config.js
+    at exportsNotFound (node:internal/modules/esm/resolve:313:10)
+    at packageExportsResolve (node:internal/modules/esm/resolve:661:9)
+    at packageResolve (node:internal/modules/esm/resolve:774:12)
+    at moduleResolve (node:internal/modules/esm/resolve:858:18)
+    at defaultResolve (node:internal/modules/esm/resolve:990:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:737:20)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:714:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:293:38)
+    at #link (node:internal/modules/esm/module_job:208:49)

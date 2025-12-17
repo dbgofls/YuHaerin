@@ -1,117 +1,377 @@
-/* Hero.css - Pixel Game Title Screen */
+/* Hero.css - Final Scene */
 .hero {
     height: 100vh;
-    background-color: var(--bg-night);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    width: 100%;
     position: relative;
     overflow: hidden;
-    color: white;
+    background: linear-gradient(to bottom, #1a1c2c 0%, #2b2b45 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-pixel);
 }
 
-/* Pixel Stars Background Animation */
-.hero::before {
-    content: " . . . . . . . . . . . . ";
+.hero__sky::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    color: white;
-    font-size: 2px;
-    line-height: 20px;
-    opacity: 0.5;
-    animation: starsMove 10s linear infinite;
-    z-index: 0;
+    background-image: radial-gradient(white 2px, transparent 2px), radial-gradient(white 1px, transparent 1px);
+    background-size: 100px 100px, 50px 50px;
+    background-position: 0 0, 25px 25px;
+    opacity: 0.6;
+    animation: twinkle 4s infinite alternate;
 }
 
-@keyframes starsMove {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-100px);
-    }
-}
-
-.hero__container {
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.hero__title {
-    font-size: 3rem;
-    /* Large pixel font */
-    color: var(--bg-window);
-    /* Yellow/Gold */
-    text-shadow: 4px 4px 0px #000;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    animation: blink 2s infinite;
-}
-
-.hero__subtitle {
-    font-family: var(--font-mono);
-    /* VT323 for smaller text */
-    font-size: 1.5rem;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 2rem;
-}
-
-.start-btn {
-    font-size: 1.5rem;
-    padding: 1.5rem 3rem;
-    background-color: var(--accent-red);
-    /* Red Start Button */
-    color: white;
-    border: 4px solid white;
-    box-shadow: 6px 6px 0px black;
-    text-transform: uppercase;
-    animation: pulse 1s infinite alternate;
-}
-
-.start-btn:hover {
-    background-color: white;
-    color: var(--accent-red);
-    border-color: var(--accent-red);
-    cursor: pointer;
-}
-
-@keyframes pulse {
+@keyframes twinkle {
     0% {
-        transform: scale(1);
+        opacity: 0.4;
     }
 
     100% {
-        transform: scale(1.05);
+        opacity: 0.8;
     }
 }
 
-/* Ground Decoration */
+.hero__ui {
+    z-index: 100;
+    text-align: center;
+    margin-bottom: 250px;
+}
+
+.hero__title {
+    font-size: 4rem;
+    color: #FFD700;
+    text-shadow: 6px 6px 0px #000000;
+    margin-bottom: 2rem;
+    letter-spacing: 4px;
+    -webkit-text-stroke: 2px #C5A000;
+}
+
+.hero__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.menu-item {
+    font-size: 1.5rem;
+    color: #D35400;
+    text-shadow: 2px 2px 0px #000000;
+    position: relative;
+    cursor: pointer;
+    width: 300px;
+    padding-left: 60px;
+    text-align: left;
+    transition: transform 0.1s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-text {
+    color: #E67E22;
+    text-shadow: 3px 3px 0px black;
+    letter-spacing: 2px;
+}
+
+.menu-item.active .menu-text {
+    color: #FFD700;
+}
+
+.cursor {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    color: #FFD700;
+    opacity: 0;
+    text-shadow: 2px 2px 0px black;
+}
+
+.menu-item.active .cursor {
+    opacity: 1;
+    animation: blink 1s infinite steps(2);
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Scene */
+.hero__scene {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Trees */
+.pixel-tree {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 60px solid #43A047;
+    filter: drop-shadow(4px 4px 0px black);
+}
+
+.pixel-tree::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 60px;
+    width: 10px;
+    height: 20px;
+    background: #5D4037;
+    border: 2px solid black;
+}
+
+.t1 {
+    left: 10%;
+    transform: scale(1.2);
+}
+
+.t2 {
+    left: 18%;
+    transform: scale(0.9);
+    bottom: 10px;
+}
+
+.t3 {
+    left: 85%;
+    transform: scale(1.1);
+}
+
+/* House */
+.pixel-house {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 140px;
+    height: 80px;
+    background: #F8CBAD;
+    border: 4px solid black;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.pixel-house .roof {
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    width: 160px;
+    height: 40px;
+    background: #5D4037;
+    border: 4px solid black;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.pixel-house .chimney {
+    position: absolute;
+    top: -60px;
+    right: 30px;
+    width: 20px;
+    height: 40px;
+    background: #78909C;
+    border: 3px solid black;
+    z-index: -1;
+}
+
+.pixel-house .door {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 30px;
+    height: 50px;
+    background: #3E2723;
+    border: 3px solid black;
+}
+
+.pixel-house .window {
+    position: absolute;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #3E2723;
+    border: 3px solid black;
+}
+
+.w1 {
+    right: 20px;
+}
+
+/* Windmill */
+.pixel-windmill {
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    width: 100px;
+    height: 120px;
+    background: #D7CCC8;
+    border: 4px solid black;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.pixel-windmill .door {
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+    width: 30px;
+    height: 40px;
+    background: #3E2723;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 2px solid black;
+}
+
+.windmill-blades {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    animation: spin 6s infinite linear;
+}
+
+.windmill-blades::before,
+.windmill-blades::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: #FFB74D;
+    border: 2px solid black;
+}
+
+.windmill-blades::before {
+    width: 100%;
+    height: 20px;
+}
+
+.windmill-blades::after {
+    height: 100%;
+    width: 20px;
+}
+
+@keyframes spin {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Fence */
+.pixel-fence {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 30px;
+    border-bottom: 2px solid black;
+}
+
+.pixel-fence::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: #8D6E63;
+    border: 2px solid black;
+}
+
+.pixel-fence::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: #8D6E63;
+    border: 2px solid black;
+}
+
+.f1 {
+    left: 5%;
+    bottom: 0;
+}
+
+.f2 {
+    left: 30%;
+    bottom: 0;
+}
+
+.f3 {
+    right: 35%;
+    bottom: 0;
+}
+
+.f4 {
+    right: 5%;
+    bottom: 0;
+}
+
 .hero__ground {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 64px;
-    background-color: var(--accent-green);
-    /* Grass color */
-    border-top: 4px solid #2E7D32;
-    background-image:
-        linear-gradient(135deg, #388E3C 25%, transparent 25%),
-        linear-gradient(225deg, #388E3C 25%, transparent 25%),
-        linear-gradient(45deg, #388E3C 25%, transparent 25%),
-        linear-gradient(315deg, #388E3C 25%, transparent 25%);
-    background-position: 10px 0, 10px 0, 0 0, 0 0;
-    background-size: 20px 20px;
-    background-repeat: repeat;
+    height: 60px;
+    background: #5D4037;
+    border-top: 8px solid #4CAF50;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.2) 2px, transparent 2.5px);
+    background-size: 10px 10px;
+    z-index: 20;
+}
+
+@media (max-width: 768px) {
+    .pixel-house {
+        left: 20%;
+        transform: scale(0.8);
+    }
+
+    .pixel-windmill {
+        right: 10%;
+        transform: scale(0.8);
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .t2,
+    .t3,
+    .f2,
+    .f3 {
+        display: none;
+    }
 }
